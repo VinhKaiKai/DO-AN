@@ -1,0 +1,39 @@
+Đặc tả hệ thống Website quản lý trung tâm tiếng Trung
+
+khi học sinh nhập mã lớp và tham gia lớp đó thì sẽ join vào lớp và xem được các bài tập của từng buổi học 
+1. 	Giới thiệu chung
+Bởi vì hoàn thành một bài học phải làm bài tập của bài đó. Như vậy mới đủ kiến thức lên cấp bậc tiếp theo. Trung tâm tạo ra website nhằm hỗ trợ từ làm bài tập hsk trên giấy thành làm bài tập trên hệ thống tức là biến đổi các bài tập trong sách giáo trình chuyển hóa lên hệ thống để học viên có thể dễ dàng hơn trong việc học tập.
+2. 	Các đối tượng người dùng
+Admin: người có vai trò cao nhất, xuyên suốt trong việc quản lý các chức năng hệ thống.
+Giáo viên: người giảng dạy ngôn ngữ của trung tâm.
+Trợ giảng: người hỗ trợ của giáo viên.
+Học viên: người tham gia quá trình học ngôn ngữ của trung tâm.
+3. 	Phạm vi hệ thống
+Quản lý thông tin người dùng (học viên, giáo viên, trợ giảng, quản trị viên).
+Quản lý khóa học, lớp học, và lịch học.
+Tổ chức bài học, bài tập, và bài kiểm tra.
+Theo dõi thanh toán học phí học viên và quản lý lương giáo viên.
+4. 	Nghiệp vụ của hệ thống
+4.1  Học viên
+Học viên muốn tham gia vào khóa học của trung tâm có thể xem các thông tin cơ bản của khóa học vd khóa hsk1 gồm 15 bài học, số tiền học phí cần nộp, thời gian hoàn thành khóa học, các đặc quyền hay ưu đãi (nếu có). Học viên muốn đăng ký khóa học có thể để lại thông tin học viên cho hệ thống gồm: tên, gmail, số điện thoại, khóa học muốn học,...Admin sẽ là người tư vấn cho học viên về thông tin khóa học, cách đóng học phí,.... Nếu học viên chấp nhận học khóa học của trung tâm thì hoàn thành học phí 1 lần duy nhất. Sau khi hoàn thành học phí và được admin duyệt, sắp lớp học. Admin sẽ giao cho học viên một tài khoản là số điện thoại hoặc email của học viên, mật khẩu là “hocvientiengtrunglythu” để sử dụng trong quá trình học tại trung tâm. Học viên sau khi đăng nhập bằng tài khoản mà trung tâm cung cấp có thể thay đổi mật khẩu, cập nhật thông tin cá nhân. Có thể xem thông tin lớp học gồm: thời gian học trong tuần vd: học thứ 3, 5, 7 lúc 7h30 tối, giáo viên, trợ giảng. Có thể làm các bài tập trong khóa học đó theo từng bài, có thể tải file bài tập giáo viên thêm vào để làm thêm, nếu thắc mắc có thể bình luận hỏi giáo viên và trợ giảng. Sau khi làm bài tập của bài học có thể xem điểm số được chấm tự động số câu đúng, câu sai, được giải thích vì sao đáp án đúng vì sao sai cho trường hợp câu hỏi trắc nghiệm. Đối với câu hỏi viết đoạn văn sẽ nhận được điểm số, lời nhận xét của giáo viên chấm. và lịch sử điểm số nếu học viên làm lại bài tập của bài đó nhiều lần để theo dõi kết quả học tập cá nhân.
+Tổ chức hoạt động dạy học: trung tâm sẽ giảng dạy trực tiếp tại trung tâm hoặc tổ chức dạy học từ xa thông qua Google hoặc zoom, cung cấp tài liệu, bài tập, bài kiểm tra trên hệ thống.
+4.2  Giáo viên và trợ giảng
+Một lớp học chỉ có duy nhất một giáo viên và một trợ giảng.
+Giáo viên: Mỗi giáo viên được admin phân công giảng dạy một số khóa học và được cung cấp một tài khoản truy cập hệ thống với tài khoản là số điện thoại hoặc email của giáo viên mật khẩu là “giaovientiengtrunglythu” Có thể cập nhật mật khẩu và thông tin cá nhân. Có thể xem lịch trình giảng dạy mà admin đã sắp cho giáo viên. Trong quá trình giảng dạy cảm nhận học viên còn yếu kiến thức. Giáo viên có thể đăng bài tập bổ sung. Giáo viên giảng dạy lớp nào thì được phép đăng bài tập bổ sung vào phần bài tập của bài học của lớp đó. Cụ thể là một googleDoc có các bài tập dạng trắc nghiệm để học viên làm thêm. Trong trường hợp có câu hỏi thắc mắc của học viên giáo viên có thể phản hồi.
+Trợ giảng: Tương tự với giáo viên, trợ giảng cũng có thể đăng nhập bằng tài khoản mật khẩu do admin cung cấp. Tài khoản vẫn là email hoặc số điện thoại của trợ giảng mật khẩu là “trogiangtiengtrunglythu” có thể cập nhật mật khẩu và thông tin cá nhân. Trong quá trình trợ giảng của trung tâm nếu thấy bất kỳ câu hỏi thắc mắc liên quan đến bài tập hay liên quan đến quá trình học tại trung tâm thì giải đáp cho học viên.
+
+
+Tính lương: tùy theo học phí của từng khóa học mà tính lương cho giáo viên và trợ giảng. Ví dụ một khóa học hsk1 với học phí 4 triệu thì trả lương cho giáo viên 40% tổng học phí của khóa học, trợ giảng là 15%. Giả sử lớp có 10 học viên thì thu nhập là 40 triệu/khóa, suy ra lương của giáo viên là 16 triệu, lương của trợ giảng là 6 triệu. Tiền lương sẽ được thanh toán sau khi kết thúc khóa học.
+4.3  Admin
+Quản lý người dùng:
+ Người admin là người có quyền hạn cao nhất hệ thống có thể quản lý thông tin liên quan đến các nhóm người dùng khác (Giáo viên, trợ giảng, học viên), người admin vào ứng dụng đăng nhập bằng email và mật khẩu có thể đổi mật khẩu hoặc khôi phục mật khẩu.
+Quản lý người dùng: muốn thêm một đối tượng người dùng ứng dụng thì. Admin có thể tạo, chỉnh sửa, xóa các tài khoản mật khẩu cho các nhóm người dùng (giáo viên, giảng viên hoặc học viên).
+ Quản lý khóa học, lớp học:
+Khóa học gồm có các khóa học do người admin tạo ra ví dụ: khóa học hsk1 có các thông tin khóa, tên, mô tả khóa học, học phí của khóa,....Với mục tiêu quản lý các khóa học đang có.
+Tạo ra một lớp học phải phân công 1 người giáo viên và 1 người trợ giảng vào lớp học. Có 2 hình thức học là online trên Google meet hoặc offline tại trung tâm. Lớp học đấy phải học một khóa học có trong danh sách khóa học.
+Sau khi học viên liên hệ cho admin và đã thanh toán học phí khóa học thành công. Thì admin tạo một tài khoản cho học viên và tiến hành ghi danh học viên vào lớp học.
+Quản lý thanh toán:
+Quản lý thanh toán: học viên thanh toán 1 lần khi đăng ký học khóa học với admin. Tiền lương của giáo viên và trợ giảng được trả vào sau khi khóa học kết thúc. Có thể xem tiền lương phải trả cho giáo viên và trợ giảng của khóa học. Giúp quản lý thu nhập và tài chính rõ ràng. Có thể xem tổng kết thu nhập của trung tâm.
+Quản lý bài giảng, bài tập:
+Quản lý bài giảng và bài tập: Mỗi khóa học có rất nhiều bài học. Vd khóa hsk1 có 15 bài học, hsk2 có 18 bài học, hsk3 có 20 bài học, ... mỗi bài học có các bài tập dạng trắc nghiệm hoặc dạng viết văn. Các bài tập trắc nghiệm ví dụ như nhìn tranh đoán ý, điền vào ô trống từ còn thiếu,...vv người admin có thể quản lý bài học và bài tập. Để đảm bảo tài liệu học tập luôn sẵn sàng.
+

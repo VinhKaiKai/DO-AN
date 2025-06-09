@@ -1,0 +1,77 @@
+version: '3'
+
+services:
+  # PHP Service
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: hanzii-app
+    restart: unless-stopped
+    working_dir: /var/www
+    volumes:
+      - ./:/var/www
+      - ./php/local.ini:/usr/local/etc/php/conf.d/local.ini
+    depends_on:
+      - db
+    networks:
+      - hanzii-network
+
+  # Nginx Service
+  webserver:
+    image: nginx:alpine
+    container_name: hanzii-webserver
+    restart: unless-stopped
+    ports:
+      - "8000:80"
+    volumes:
+      - ./:/var/www
+      - ./nginx/conf.d/:/etc/nginx/conf.d/
+    depends_on:
+      - app
+    networks:
+      - hanzii-network
+
+  # MySQL Service
+  db:
+    image: mysql:8.0
+    container_name: hanzii-db
+    restart: unless-stopped
+    environment:
+      MYSQL_DATABASE: ${DB_DATABASE:-hanzii}
+      MYSQL_ROOT_PASSWORD: ${DB_PASSWORD:-root}
+      MYSQL_PASSWORD: ${DB_PASSWORD:-root}
+      MYSQL_USER: ${DB_USERNAME:-hanzii}
+      SERVICE_TAGS: dev
+      SERVICE_NAME: mysql
+    ports:
+      - "3306:3306"
+    volumes:
+      - dbdata:/var/lib/mysql
+    networks:
+      - hanzii-network
+      
+  # phpMyAdmin Service
+  phpmyadmin:
+    image: phpmyadmin/phpmyadmin
+    container_name: hanzii-phpmyadmin
+    restart: unless-stopped
+    ports:
+      - "8080:80"
+    environment:
+      PMA_HOST: db
+      MYSQL_ROOT_PASSWORD: ${DB_PASSWORD:-root}
+    depends_on:
+      - db
+    networks:
+      - hanzii-network
+
+# Networks
+networks:
+  hanzii-network:
+    driver: bridge
+
+# Volumes
+volumes:
+  dbdata:
+    driver: local 
